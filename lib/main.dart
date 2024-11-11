@@ -54,17 +54,21 @@ class StorePage extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: Image.asset(
-                "assets/bag.png",
-                fit: BoxFit.fill,
+              child: Container(
                 width: MediaQuery.of(context).size.width,
+                child: Image.asset(
+                  "assets/bag.png",
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             Expanded(
-                child: Image.asset(
-              "assets/shoes.png",
-              fit: BoxFit.fill,
+                child: Container(
               width: MediaQuery.of(context).size.width,
+              child: Image.asset(
+                "assets/shoes.png",
+                fit: BoxFit.cover,
+              ),
             )),
           ],
         ),
