@@ -22,55 +22,54 @@ class StorePage extends StatelessWidget {
     // store page의 UI 요소 구현
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            SizedBox(
-              height: 70,
-              child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: Row(
-                  children: [
-                    Text('Woman',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        )),
-                    Spacer(),
-                    Text('Kids',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        )),
-                    Spacer(),
-                    Text('Shoes',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        )),
-                    Spacer(),
-                    Text('Bag',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        )),
-                  ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 70,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  child: Row(
+                    children: [
+                      Text('Woman',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          )),
+                      Spacer(),
+                      Text('Kids',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          )),
+                      Spacer(),
+                      Text('Shoes',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          )),
+                      Spacer(),
+                      Text('Bag',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          )),
+                    ],
+                  ),
                 ),
               ),
-            ),
-            Expanded(
-              child: Container(
+              Container(
                 width: MediaQuery.of(context).size.width,
                 child: Image.asset(
                   "assets/bag.png",
                   fit: BoxFit.cover,
                 ),
               ),
-            ),
-            Expanded(
-                child: Container(
-              width: MediaQuery.of(context).size.width,
-              child: Image.asset(
-                "assets/shoes.png",
-                fit: BoxFit.cover,
+              Container(
+                width: MediaQuery.of(context).size.width,
+                child: Image.asset(
+                  "assets/shoes.png",
+                  fit: BoxFit.cover,
+                ),
               ),
-            )),
-          ],
+            ],
+          ),
         ),
       ),
     ); // 각 페이지에는 스캐폴드가 있어야 한다~
